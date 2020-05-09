@@ -1,0 +1,33 @@
+{
+  "name": "scss-gulp-boilerplate",
+  "version": "1.0.0",
+  "description": "Rapid development boilerplate for sass projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/gulp/bin/gulp.js watch",
+    "min": "node_modules/gulp/bin/gulp.js min",
+    "minify-css": "node_modules/gulp/bin/gulp.js minify-css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vikrant Negi",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "browser-sync": "^2.26.7",
+    "graceful-fs": "^4.1.11",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^1.2.2",
+    "pipeline-js": "^1.0.2",
+    "pump": "^3.0.0"
+  }
+}

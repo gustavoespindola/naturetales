@@ -131,10 +131,10 @@ function watch() {
 		}
 	});
 
-	gulp.watch("./src/scss/**/*.scss", styles, minifyCSS);
+	gulp.watch("./src/scss/**/*.scss", styles); //minifyCSS
 	gulp.watch("./src/html/*.html", minifyhtml);
 	gulp.watch("./src/js/*.js", js);
-	gulp.watch("./src/img/*", optimiseImages);
+	// gulp.watch("./src/img/*", optimiseImages);
 
 }
 
@@ -149,9 +149,9 @@ var build = gulp.series(gulp.parallel(styles));
  * You can use CommonJS `exports` module notation to declare tasks
  */
 
-exports.styles = styles;
-exports.watch = watch;
-exports.build = build;
+// exports.styles = 	styles;
+exports.watch 	= 	watch;
+exports.build 	= 	build;
 /*
  * Define default task that can be called by just running `gulp` from cli
  */

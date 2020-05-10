@@ -1,6 +1,6 @@
 // Variables
 
-$color-yellow: #FCD780;
+$color-dandelion: #FCD780;
 
 // type color
 $color-english-violet: #4d4051;
@@ -18,7 +18,7 @@ $background-color-header: $background-color-hero;
 
 $font-family-body: 'Nunito Sans', sans-serif;
 
-$font-size-html: 18px;
+$font-size-html: 20px;
 $font-size-small: .875rem;
 $font-size-normal: 1rem;
 
@@ -31,6 +31,12 @@ $font-size-heading: 1rem;
 $font-weight-heading: 900;
 
 $font-color-body: $color-english-violet;
+
+$theme-colors: (
+  "primary": $color-dandelion,
+  "secondary": $color-english-violet,
+  "danger": #ff4136
+);
 
 @import "node_modules/bootstrap/scss/bootstrap";
 // @import "node_modules/bootstrap/scss/functions";
@@ -48,12 +54,16 @@ html{
 		transition: all .25s ease;
 		color: $font-color-body;
 		background-color: $background-color-body;
+		font-weight: $font-weight-medium;
 		&.pace-done{
 			opacity: 1;
 			transition: all .25s ease;
 		}
 		section{
 			position: relative;
+			.container{
+				max-width: 64rem;
+			}
 		}
 	}
 	@include media-breakpoint-down(lg){
@@ -64,21 +74,48 @@ html{
 h1{
 	font-weight: $font-weight-light;
 	letter-spacing: -.5px;
+	line-height: 1.1;
 }
 h2{
 	letter-spacing: 0.35px;
 	font-size: 2rem;
 	font-weight: $font-weight-semibold;
+	line-height: 1.25;
+	small{
+		font-size: 1rem;
+	}
 }
+
+.border-radius-big{
+	border-radius: 1.5rem !important;
+}
+
+.font-weight-light{
+	font-weight: $font-weight-light;
+}
+
 h3{
 	line-height: 1.25;
 	letter-spacing: 0.35px;
 	font-size: 1.5rem;
 	font-weight: $font-weight-light;
+	line-height: 1.25;
 }
 
 h4,h5,h6{
 	font-weight: $font-weight-semibold;
+	// line-height: 1.25;
+}
+
+p{
+}
+
+small{
+	font-weight: $font-weight-light;
+}
+
+.text-hint{
+	opacity: .6;
 }
 
 b{
@@ -86,13 +123,17 @@ b{
 }
 
 .btn-yellow{
-	background-color: $color-yellow;
-	border-color: $color-yellow;
+	background-color: $color-dandelion;
+	border-color: $color-dandelion;
 	color: $font-color-body;
 	padding-right: 1.5rem;
 	padding-left: 1.5rem;
 	font-size: $font-size-small;
 	box-shadow: 0 3px 7px rgba(0,0,0,.08)
+}
+
+.btn-primary{
+	color: $color-english-violet;
 }
 
 // Site
@@ -110,7 +151,7 @@ header{
 		display: block;
 		.logotype-image{
 			img{
-				height: 1rem;
+				height: 1.5rem;
 				width: auto;
 			}
 		}
@@ -145,7 +186,7 @@ section{
 		}
 		.hero-logotype{
 			img{
-				height: 4rem;
+				height: 6rem;
 			}
 		}
 	}
@@ -160,24 +201,46 @@ section{
 	&.divider-wave{
 		svg{
 			height: 2rem;
+			stroke-linecap: round;
 			fill: #BBA3AB;
+			stroke-width: 3px;
 		}
+
 	}
 	&.services{
 		.card{
 			overflow: hidden;
-			&:nth-child(1){
+			color: white;
+			&.card-vsm{
 				background-color: $color-crystal-blue;
 			}
-			&:nth-child(1){
+			&.card-vy{
 				background-color: $color-steel-teal;
 			}
-			.card-text{
-				padding: 2rem;
-				color: white;
-			}
-			img{
-				max-width: 100%;
+			&.card-ps{
+				background-color: $background-color-hero;
+				color: $color-english-violet;
+				svg{
+					max-height: 100%;
+					max-width: 100%;
+					opacity: .5;
+					position: absolute;
+					overflow: visible;
+					&.layer-1{
+						animation: rotation 16s  infinite linear;
+						path{
+							stroke:#f007ffbf;
+							stroke-width: 2rem;
+						}
+					}
+					&.layer-2{
+						animation: rotation 14s reverse infinite linear;
+						path{
+							stroke:#00bcd4;
+							stroke-width: 2rem;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -191,23 +254,115 @@ section{
 			height: 100%;
 		}
 	}
+	&.live-stream{
+		.card{ 
+			background-color: $background-color-hero;
+			a{
+				text-decoration: underline;
+				color: $color-english-violet;
+			}
+		}
+	}
 }
 
 .card{
 	border: none;
+	overflow: hidden;
+	margin-bottom: 1rem;
+	.card-text{
+		padding: 2rem;
+	}
+	img{
+		max-width: 100%;
+	}
 }
-.border-radius-big{
-	border-radius: 1.5rem !important;
+
+footer{
+	background-color: $color-yankees-blue;
+	h6{
+		color: rgba(white, .5);
+	}
+	p, address{
+		color: rgba(white, .5);
+	}
+	nav{
+		a{
+			color: rgba(white, .3);
+			display: flex;
+			flex-direction: column;
+			margin-bottom: .5rem;
+			transition: all .25s ease;
+			&:hover{
+				color: white;
+			}
+		}
+	}
 }
 
-.font-weight-light{
-	font-weight: $font-weight-light;
+
+//Animations
+section{
+	&.hero{
+		.hero-logotype{
+			animation-delay: .5s;
+		}
+		h1{
+			animation-delay: .6s;
+		}
+		.btn{
+			animation-delay: .7s;
+		}
+	}
+	&.benefits{
+		.row{
+			.order-1{
+				animation-delay: .8s;
+			}
+			.order-2{
+				animation-delay: .9s;
+			}
+			.order-3{
+				animation-delay: 1s;
+			}
+		}
+	}
 }
 
 
 
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 1rem, 0);
+    transform: translate3d(0, 1rem, 0);
+    visibility: visible;
+    opacity: 0;
+  }
 
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 1rem, 0);
+    transform: translate3d(0, 1rem, 0);
+    visibility: visible;
+    opacity: 0;
+  }
 
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 
-
+@keyframes rotation {
+		from {
+				transform: rotate(0deg) scale(.9);
+		}
+		to {
+				transform: rotate(90deg);
+		}
+}

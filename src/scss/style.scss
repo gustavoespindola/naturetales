@@ -279,6 +279,10 @@ section{
 
 footer{
 	background-color: $color-yankees-blue;
+	.logotype{
+		height: 7rem;
+		opacity: .8;
+	}
 	h6{
 		color: rgba(white, .5);
 	}
@@ -297,6 +301,30 @@ footer{
 			}
 		}
 	}
+}
+
+//modals
+.modal{
+
+	.modal-content{
+		border: 0;
+		padding: 1rem;
+		padding-bottom: 0;
+		border-radius: 1.5rem;
+	}
+	.modal-body{
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+	}
+	iframe{
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+.modal-backdrop{
+	background-color: $color-yankees-blue;
 }
 
 

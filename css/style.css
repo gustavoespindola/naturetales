@@ -10481,6 +10481,11 @@ footer {
   background-color: #28334C;
 }
 
+footer .logotype {
+  height: 7rem;
+  opacity: .8;
+}
+
 footer h6 {
   color: rgba(255, 255, 255, 0.5);
 }
@@ -10501,6 +10506,28 @@ footer nav a {
 
 footer nav a:hover {
   color: white;
+}
+
+.modal .modal-content {
+  border: 0;
+  padding: 1rem;
+  padding-bottom: 0;
+  border-radius: 1.5rem;
+}
+
+.modal .modal-body {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.modal iframe {
+  width: 100%;
+  max-width: 100%;
+}
+
+.modal-backdrop {
+  background-color: #28334C;
 }
 
 section.hero .hero-logotype {

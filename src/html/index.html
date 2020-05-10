@@ -29,7 +29,7 @@
 </head>
 <body class="">
 	
-	<header>
+	<header id="header">
 		<div class="container animated fadeIn">
 			<div class="row d-flex justify-content-between">
 				<div class="col d-flex justify-content-start">
@@ -124,9 +124,11 @@
 						<div class="card border-radius-big card-vsm">
 							<div class="card-text">
 								<h2 class="mb-4">Vibroacoustic Sound Massage (VSM)</h2>
-								<p class="mb-3">Every Thursday at 20:00 – Price: 150 kr. </p>
+								<p class="mb-3">Price: 150 kr. – Every Thursday at 20:00 </p>
 								<p class="mb-3">Multi-sensorial live performances, experienced on a vibroacoustic floor that massages body and mind into the most relaxed, de-stressed and present state of being.</p>
-								<a href="#" class="btn btn-primary btn-md">Book Now</a>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#book-vsm">
+								  Book Now
+								</button>
 							</div>
 							<div class="card-image">
 								<img src="./images/card-vibroacousticsoundmassage-small.jpg" alt="">
@@ -140,7 +142,12 @@
 								<h2 class="mb-4">Vibroacoustic <br>Yoga</h2>
 								<p class="mb-3">Price: 250 kr. –  Every Thursday at 20:00</p>
 								<p class="mb-3">Special extended Yoga session accompanied by a subtle live atmospheric-organic soundscape, that ends with a Yoga Nidra relaxation and a Vibroacoustic Sound Massage.</p>
-								<a href="#" class="btn btn-primary btn-md">Book Now</a>
+
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#book-vy">
+								  Book Now
+								</button>
+
+
 							</div>
 							<div class="card-image">
 								<img src="./images/card-vibroacousticyoga-small.jpg" alt="">
@@ -154,8 +161,8 @@
 						<div class="card border-radius-big card-vy mb-0">
 							<div class="card-text">
 								<h2 class="mb-4">Vibroacoustic<br>Yoga</h2>	
-								<p>Every Sunday at 15:00 & 16:00 <span class="text-hint d-block">Danish Time</span></p>
-								<a class="btn btn-primary" href="#">Book Now</a>
+								<p>Every Sunday at 15:00 & 16:00 <small class="text-hint d-block">Danish Time</small></p>
+								<a class="btn btn-primary mb-0" href="#">Book Now</a>
 							</div>
 						</div>
 					</div>
@@ -212,7 +219,7 @@
 
 							<p>Every Sunday at 15:00 &amp; 16:00 <small class="d-block text-hint">Danish Time</small></p>
 
-							<a class="link mt-5 d-block" href="#">More Info</a>
+							<a class="link mt-5 mb-3 d-block" href="#">More Info</a>
 						</div>
 						</div>
 					</div>
@@ -227,7 +234,7 @@
 
 							<p>Sunday, May 24th, 17:00 <small class="d-block text-hint">Danish Time</small></p>
 
-							<a class="link mt-5 d-block" href="#">More Info</a>
+							<a class="link mt-5 mb-3 d-block" href="#">More Info</a>
 						</div>
 						</div>
 					</div>
@@ -242,7 +249,7 @@
 
 							<p>Sunday, May 31st, 17:00 <small class="d-block text-hint">Danish Time</small></p>
 
-							<a class="link mt-5 d-block" href="#">More Info</a>
+							<a class="link mt-5 mb-3 d-block" href="#">More Info</a>
 						</div>
 						</div>
 					</div>
@@ -259,14 +266,14 @@
 		<section class="py-5">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-lg-6 mb-3 mb-lg-0">
-						<h6>Logotype</h6>
+					<div class="col-12 col-lg-3 mb-3 mb-lg-0 order-3 order-lg-1">
+						<img class="logotype mb-3" src="./images/logotype-light.svg" alt="">
 						<address>
 							<!-- <p class="mb-0">Made from Chile with love</p> -->
-							<a href="#" class="link">Address / William Wains Gade 11 1st th. 1432, Copenhagen, Denmark.</a>
+							<!-- <a href="#" class="link">Address / William Wains Gade 11 1st th. 1432, Copenhagen, Denmark.</a> -->
 						</address>
 					</div>
-					<div class="col-12 col-lg-3 mb-3 mb-lg-0">
+					<div class="col-12 col-lg-3 mb-3 mb-lg-0 order-1 order-lg-2">
 						<h6>About Us</h6>
 						<nav>
 							<a class="link" href="#">Team</a>
@@ -274,7 +281,7 @@
 							<a class="link" href="https://soundcloud.com/naturetales" target="blank_">Soundcloud</a>
 						</nav>
 					</div>
-					<div class="col-12 col-lg-3 mb-3 mb-lg-0">
+					<div class="col-12 col-lg-3 mb-3 mb-lg-0 order-2 order-lg-3">
 						<h6>Contact Us</h6>
 						<nav>
 							<a class="link" href="mailto:info@naturetales.org" target="blank_">info@naturetales.org</a>
@@ -287,13 +294,73 @@
 		</section>
 		
 	</footer>
-	
+
+<!-- Modal VSM-->
+<div class="modal fade bd-example-modal-lg" id="book-vsm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Booking</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Forms -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6Fpjqt-Nzm9ODr6o9gQc-Zh8hOivuqm5-02a_KqdVcAUPKA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" class="embed-responsive-item">Cargando…</iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal VY-->
+<div class="modal fade bd-example-modal-lg" id="book-vy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Booking</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Forms -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf7w6k_xJafDgoxHkhzH4Sh5lP5snG9LaxZrXsb6SNZO2ZzBA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" class="embed-responsive-item">Cargando…</iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal VYF -->
+<div class="modal fade bd-example-modal-lg" id="book-vyf" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Booking</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Forms -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf7w6k_xJafDgoxHkhzH4Sh5lP5snG9LaxZrXsb6SNZO2ZzBA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" class="embed-responsive-item">Cargando…</iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- Foo -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/pace.js"></script>
+	<!-- <script src="js/jquery.min.js"></script> -->
+
 	<!-- <script src="js/kit3d1ca088ac.js"></script> -->
-	<script src="js/app.js"></script>
 
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+	<script src="js/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 
+<script src="js/pace.js"></script>
+<script src="js/app.js"></script>
+ 
 </body>
 </html>

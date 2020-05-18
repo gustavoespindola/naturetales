@@ -10340,10 +10340,18 @@ header {
   -ms-flex-align: center;
       align-items: center;
   height: 5rem;
-  position: relative;
   top: 0;
-  background-color: rgba(174, 129, 139, 0.1);
+  background-color: #f4eeef;
   z-index: 9;
+  transition: all .25s ease;
+}
+
+header.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #f4eeef;
+  top: 0;
+  transition: all .25s ease;
 }
 
 header .logotype {
@@ -10351,7 +10359,7 @@ header .logotype {
 }
 
 header .logotype .logotype-image img {
-  height: 3rem;
+  height: 3.5rem;
   width: auto;
 }
 
@@ -10371,14 +10379,14 @@ header nav a.link:hover {
   opacity: 1;
 }
 
-header nav a.link.active {
+header nav a.link.active, header nav a.link.current {
   font-weight: 700;
   opacity: 1;
   text-decoration: none;
 }
 
 section.hero {
-  background-color: rgba(174, 129, 139, 0.1);
+  background-color: #f4eeef;
 }
 
 section.hero h1 {
@@ -10395,7 +10403,7 @@ section.benefits .col-3-icon svg {
 }
 
 section .wave {
-  fill: rgba(174, 129, 139, 0.1);
+  fill: #f4eeef;
 }
 
 section.divider-wave svg {
@@ -10419,7 +10427,7 @@ section.services .card.card-vy {
 }
 
 section.services .card.card-ps {
-  background-color: rgba(174, 129, 139, 0.1);
+  background-color: #f4eeef;
   color: inherit;
 }
 
@@ -10462,7 +10470,7 @@ section.separator-image .background-image {
 }
 
 section.live-stream .card {
-  background-color: rgba(174, 129, 139, 0.1);
+  background-color: #f4eeef;
 }
 
 section.live-stream .card a {

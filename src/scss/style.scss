@@ -14,7 +14,7 @@ $theme-color: $color-tuscan-red;
 
 $background-color-body: rgba(lighten($theme-color,20%),.05); //#FDF8FF
 $background-color-pace: $theme-color;
-$background-color-hero: rgba(lighten($theme-color,20%),.1); //#EBE4ED
+$background-color-hero: lighten($theme-color,55%); //#EBE4ED
 $background-color-header: $background-color-hero;
 $font-color-body: rgba(darken($theme-color,0%),1);
 $icon-color: rgba(lighten($theme-color,25%),.9);
@@ -53,6 +53,7 @@ $theme-colors: (
 html{
 	font-size: $font-size-html;
 	line-height: 1.5;
+	// scroll-behavior: smooth;
 	body{
 		font-family: $font-family-body;
 		transition: all .25s ease;
@@ -148,20 +149,26 @@ a[href="#"]{
 
 // Site
 header{
-	// padding: 1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 5rem;
-	position: relative;
+	// position: relative;
 	top: 0;
 	background-color: $background-color-header;
 	z-index: 9;
+	transition: all .25s ease;
+	&.sticky{
+		position: sticky;
+		background-color: $background-color-header;
+		top: 0;
+		transition: all .25s ease;
+	}
 	.logotype{
 		display: block;
 		.logotype-image{
 			img{
-				height: 3rem;
+				height: 3.5rem;
 				width: auto;
 			}
 		}
@@ -178,7 +185,7 @@ header{
 				&:hover{
 					opacity: 1;
 				}
-				&.active{
+				&.active,&.current{
 					font-weight: $font-weight-semibold;
 					opacity: 1;
 					text-decoration: none;

@@ -1,6 +1,6 @@
 // Variables
 
-$color-dandelion: #FCD780;
+$color-dandelion: hsl(42, 95%, 75%);
 
 // type color
 $color-english-violet: #4d4051;
@@ -9,13 +9,19 @@ $color-yankees-blue: #28334C;
 $color-crystal-blue: #75A4AE;
 $color-steel-teal: #568B88;
 
-$background-color-body: #FDF8FF;
-$background-color-pace: red;
+// THEME
+$theme-color: $color-tuscan-red;
 
-$background-color-hero: #EBE4ED;
-
+$background-color-body: rgba(lighten($theme-color,20%),.05); //#FDF8FF
+$background-color-pace: $theme-color;
+$background-color-hero: rgba(lighten($theme-color,20%),.1); //#EBE4ED
 $background-color-header: $background-color-hero;
+$font-color-body: rgba(darken($theme-color,0%),1);
+$icon-color: rgba(lighten($theme-color,25%),.9);
+$divider-wave-color: $icon-color;
 
+$footer-background-color: rgba(lighten($theme-color,10%),1);
+//Font
 $font-family-body: 'Nunito Sans', sans-serif;
 
 $font-size-html: 20px;
@@ -29,8 +35,6 @@ $font-weight-bold: 900;
 
 $font-size-heading: 1rem;
 $font-weight-heading: 900;
-
-$font-color-body: $color-english-violet;
 
 $theme-colors: (
   "primary": $color-dandelion,
@@ -122,6 +126,12 @@ b{
 	font-weight: $font-weight-semibold;
 }
 
+a[href="#"]{
+		opacity: .5;
+		cursor: auto;
+		pointer-events: none;
+}
+
 .btn-yellow{
 	background-color: $color-dandelion;
 	border-color: $color-dandelion;
@@ -151,7 +161,7 @@ header{
 		display: block;
 		.logotype-image{
 			img{
-				height: 1.5rem;
+				height: 3rem;
 				width: auto;
 			}
 		}
@@ -191,18 +201,22 @@ section{
 		}
 	}
 	&.benefits{
-		color: $color-tuscan-red;
+		// color: $color-tuscan-red;
 		.col-3-icon{
-			img{
+			svg{
 				width: 5rem;
+				fill: $icon-color;
 			}
 		}
+	}
+	.wave{
+		fill: $background-color-hero;
 	}
 	&.divider-wave{
 		svg{
 			height: 2rem;
 			stroke-linecap: round;
-			fill: #BBA3AB;
+			fill: $divider-wave-color;
 			stroke-width: 3px;
 		}
 
@@ -219,7 +233,7 @@ section{
 			}
 			&.card-ps{
 				background-color: $background-color-hero;
-				color: $color-english-violet;
+				color: inherit;
 				svg{
 					max-height: 100%;
 					max-width: 100%;
@@ -227,7 +241,7 @@ section{
 					position: absolute;
 					overflow: visible;
 					&.layer-1{
-						animation: rotation 16s  infinite linear;
+						animation: rotation 14s infinite linear;
 						path{
 							stroke:#f007ffbf;
 							stroke-width: 2rem;
@@ -278,7 +292,7 @@ section{
 }
 
 footer{
-	background-color: $color-yankees-blue;
+	background-color: $footer-background-color;
 	.logotype{
 		height: 7rem;
 		opacity: .8;
@@ -391,6 +405,6 @@ section{
 				transform: rotate(0deg) scale(.9);
 		}
 		to {
-				transform: rotate(90deg);
+				transform: rotate(90deg) scale(1);
 		}
 }

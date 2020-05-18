@@ -74,7 +74,7 @@ function styles() {
 		.pipe(
 			autoprefixer({
 				browsers: ['last 4 versions'],
-				cascade: false,
+				cascade: true,
 			}),
 		)
 		.pipe(sourcemaps.write('.'))
@@ -132,6 +132,7 @@ function watch() {
 	});
 
 	gulp.watch("./src/scss/**/*.scss", styles); //minifyCSS
+	gulp.watch("./css/**/*.css", styles); //minifyCSS
 	gulp.watch("./src/html/*.html", minifyhtml);
 	gulp.watch("./src/js/*.js", js);
 	// gulp.watch("./src/img/*", optimiseImages);
@@ -149,7 +150,7 @@ var build = gulp.series(gulp.parallel(styles));
  * You can use CommonJS `exports` module notation to declare tasks
  */
 
-// exports.styles = 	styles;
+exports.styles = 	styles;
 exports.watch 	= 	watch;
 exports.build 	= 	build;
 /*

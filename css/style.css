@@ -113,7 +113,7 @@ ul ol {
 }
 
 dt {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 dd {
@@ -519,7 +519,7 @@ kbd {
 kbd kbd {
   padding: 0;
   font-size: 100%;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 pre {
@@ -5056,7 +5056,7 @@ input[type="button"].btn-block {
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
@@ -5242,7 +5242,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .alert-link {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .alert-dismissible {
@@ -5781,7 +5781,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 .close {
   float: right;
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
@@ -9968,7 +9968,7 @@ button.bg-dark:focus {
 }
 
 .font-weight-bold {
-  font-weight: 900 !important;
+  font-weight: 700 !important;
 }
 
 .font-weight-bolder {
@@ -10241,7 +10241,7 @@ html body {
   transition: all .25s ease;
   color: #7a4f58;
   background-color: rgba(174, 129, 139, 0.05);
-  font-weight: 400;
+  font-weight: 200;
 }
 
 html body.pace-done {

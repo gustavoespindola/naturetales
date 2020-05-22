@@ -23,7 +23,7 @@ $divider-wave-color: $icon-color;
 $footer-background-color: rgba(lighten($theme-color,10%),1);
 //Font
 $font-family-body: 'Nunito Sans', sans-serif;
-
+ 
 $font-size-html: 20px;
 $font-size-small: .875rem;
 $font-size-normal: 1rem;
@@ -47,8 +47,7 @@ $theme-colors: (
 // @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins/_breakpoints";
 @import "_pace";
-
-
+// @import "aos";
 //Site
 html{
 	font-size: $font-size-html;
@@ -62,7 +61,7 @@ html{
 		font-weight: $font-weight-medium;
 		&.pace-done{
 			opacity: 1;
-			transition: all .25s ease;
+			transition: all .25s ease; 
 		}
 		section{
 			position: relative;
@@ -170,6 +169,8 @@ header{
 			img{
 				height: 3.5rem;
 				width: auto;
+				opacity: .7;
+				mix-blend-mode: multiply;
 			}
 		}
 	}
@@ -236,7 +237,9 @@ section{
 				background-color: $color-crystal-blue;
 			}
 			&.card-vy{
+				background: linear-gradient( #6a9f9d 0% , #568B88 100%);
 				background-color: $color-steel-teal;
+				box-magic: -0.5rem -0.5rem 1.5rem rgba(255,255,255,.1), 0.5rem 0.5rem 1.5rem rgba(0,0,0,.1);
 			}
 			&.card-ps{
 				background-color: $background-color-hero;
@@ -302,7 +305,7 @@ footer{
 	background-color: $footer-background-color;
 	.logotype{
 		height: 7rem;
-		opacity: .8;
+		opacity: .5;
 	}
 	h6{
 		color: rgba(white, .5);
@@ -312,7 +315,7 @@ footer{
 	}
 	nav{
 		a{
-			color: rgba(white, .3);
+			color: rgba(white, .5);
 			display: flex;
 			flex-direction: column;
 			margin-bottom: .5rem;
@@ -415,3 +418,58 @@ section{
 				transform: rotate(90deg) scale(1);
 		}
 }
+
+
+
+[data-aos][data-aos][data-aos-duration="1200"],
+body[data-aos-duration="1200"] [data-aos] {
+	transition-duration: 1.2s
+}
+
+[data-aos][data-aos][data-aos-delay="1200"],
+body[data-aos-delay="1200"] [data-aos] {
+	transition-delay: 0
+}
+
+[data-aos][data-aos][data-aos-delay="1200"].aos-animate,
+body[data-aos-delay="1200"] [data-aos].aos-animate {
+	transition-delay: 1.2s
+}
+[data-aos][data-aos][data-aos-delay="150"],
+body[data-aos-delay="150"] [data-aos] {
+	transition-delay: 0
+}
+
+[data-aos][data-aos][data-aos-delay="150"].aos-animate,
+body[data-aos-delay="150"] [data-aos].aos-animate {
+	transition-delay: .15s
+}
+
+[data-aos][data-aos][data-aos-delay="300"],
+body[data-aos-delay="300"] [data-aos] {
+	transition-delay: 0
+}
+
+[data-aos][data-aos][data-aos-delay="300"].aos-animate,
+body[data-aos-delay="300"] [data-aos].aos-animate {
+	transition-delay: .3s
+}
+[data-aos][data-aos][data-aos-easing=ease],
+body[data-aos-easing=ease] [data-aos] {
+	transition-timing-function: ease
+}
+[data-aos^=fade][data-aos^=fade] {
+	opacity: 0;
+	transition-property: opacity, transform
+}
+
+[data-aos^=fade][data-aos^=fade].aos-animate {
+	opacity: 1;
+	transform: translateZ(0)
+}
+
+[data-aos=fade-up] {
+	transform: translate3d(0, 100px, 0)
+}
+
+

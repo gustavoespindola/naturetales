@@ -119,7 +119,7 @@ small{
 }
 
 .text-hint{
-	opacity: .6;
+	opacity: .7;
 }
 
 b{
@@ -180,7 +180,7 @@ header{
 			&.link{
 				color: inherit;
 				text-decoration: underline;
-				opacity: .6;
+				opacity: .7;
 				margin-left: 1rem;
 				display: inline-block;
 				&:hover{
@@ -276,6 +276,8 @@ section{
 			background-position: center;
 			background-size: cover;
 			height: 100%;
+			background-image: url('../images/separator-image.jpg');
+			background-image: url('../images/separator-image.webp');
 		}
 	}
 	&.live-stream{
@@ -308,14 +310,14 @@ footer{
 		opacity: .5;
 	}
 	h6{
-		color: rgba(white, .5);
+		color: rgba(white, .7);
 	}
 	p, address{
-		color: rgba(white, .5);
+		color: rgba(white, .7);
 	}
 	nav{
 		a{
-			color: rgba(white, .5);
+			color: rgba(white, .7);
 			display: flex;
 			flex-direction: column;
 			margin-bottom: .5rem;

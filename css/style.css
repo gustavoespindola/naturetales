@@ -10471,8 +10471,7 @@ section.separator-image .background-image {
   background-position: center;
   background-size: cover;
   height: 100%;
-  background-image: url("../images/separator-image.jpg");
-  background-image: url("../images/separator-image.webp");
+  background-image: image("../images/separator-image.webp", "../images/separator-image.jpg");
 }
 
 section.live-stream .card {

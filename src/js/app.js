@@ -30,9 +30,6 @@ $(document).ready(function(){
 			scrollTop: $($(this).attr("href")).offset().top -150 }, 500);
 	});
 
-
-
-
 var iframeVsm = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6Fpjqt-Nzm9ODr6o9gQc-Zh8hOivuqm5-02a_KqdVcAUPKA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" class="animate fadeIn 		embed-responsive-item"></iframe>'
 var iframebookVy = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf7w6k_xJafDgoxHkhzH4Sh5lP5snG9LaxZrXsb6SNZO2ZzBA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" class="animate fadeIn 		embed-responsive-item"></iframe>'
 var iframebookVyf = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf7w6k_xJafDgoxHkhzH4Sh5lP5snG9LaxZrXsb6SNZO2ZzBA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" class="animate fadeIn 		embed-responsive-item"></iframe>'

@@ -9,8 +9,8 @@
     "minify-css": "node_modules/gulp/bin/gulp.js minify-css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Vikrant Negi",
-  "license": "ISC",
+  "author": "Comun.work",
+  "license": "",
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^3.1.0",

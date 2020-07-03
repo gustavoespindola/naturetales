@@ -36,6 +36,7 @@ var iframebookVyf = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf7w6
 var iframeintroSession = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf3Um34tg7dn0AG-Krx05vEMczrOXSne1ucte5W06-5fYOwUg/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" class="animate fadeIn 		embed-responsive-item"></iframe>'
 var iframegiftCard = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfSqzpbzMcwkuVR6NQVcZdUP3QE8wpHfxBBg5FbZ6tKKpsNAA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" class="animate fadeIn 		embed-responsive-item"></iframe>'
 var iframecontactUs = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdmeeayo3O57E8m1wZCHeE68JAGEjqXdAOMx-_A_sWYqMIS4A/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" class="animate fadeIn 		embed-responsive-item"></iframe>'
+var iframeCalendar = '<iframe src="https://calendar.google.com/calendar/htmlembed?src=naturetalesinfo%40gmail.com&ctz=Europe%2FCopenhagen" class="embed-responsive-item animate fadeIn" height="600" frameborder="0" scrolling="no"></iframe>'
 
 	
 	$('.btn').click(function() {
@@ -57,6 +58,9 @@ var iframecontactUs = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdm
 		}
 		if(modalAttr == '#contact-us'){
 			$('#contact-us .modal-body').append(iframecontactUs);
+		}
+		if(modalAttr == '#modal-calendar'){
+			$('#modal-calendar .modal-body').append(iframeCalendar);
 		}
 		// console.log("ok")
 	});

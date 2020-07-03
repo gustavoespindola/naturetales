@@ -10395,6 +10395,11 @@ header nav a.link {
   display: inline-block;
 }
 
+header nav a.link svg {
+  width: 1.2rem;
+  margin-top: -6px;
+}
+
 header nav a.link:hover {
   opacity: 1;
 }

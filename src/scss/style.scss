@@ -199,6 +199,10 @@ header{
 				opacity: .7;
 				margin-left: 1rem;
 				display: inline-block;
+				svg{
+					width: 1.2rem;
+					margin-top: -6px;
+				}
 				&:hover{
 					opacity: 1;
 				}

@@ -10264,7 +10264,7 @@ html body section .container {
 }
 
 h1, .h1 {
-  font-weight: 200;
+  font-weight: 700;
   letter-spacing: -.5px;
   line-height: 1.1;
 }
@@ -10351,7 +10351,6 @@ header {
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-  height: 5rem;
   top: 0;
   background-color: #f4eeef;
   z-index: 9;
@@ -10376,11 +10375,22 @@ header .logotype {
   display: block;
 }
 
+header .logotype a {
+  color: #4d4051;
+}
+
+header .logotype a:hover {
+  opacity: .8;
+}
+
 header .logotype .logotype-image img {
   height: 3.5rem;
   width: auto;
   opacity: .7;
-  mix-blend-mode: multiply;
+}
+
+header .logotype .logotype-image span {
+  color: #4d4051;
 }
 
 header nav a {

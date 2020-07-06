@@ -76,7 +76,7 @@ html{
 }
 
 h1,.h1{
-	font-weight: $font-weight-light;
+	font-weight: $font-weight-semibold;
 	letter-spacing: -.5px;
 	line-height: 1.1;
 }
@@ -162,7 +162,7 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 5rem;
+	// height: 5rem;
 	// position: relative;
 	top: 0;
 	background-color: $background-color-header;
@@ -181,12 +181,21 @@ header{
 	}
 	.logotype{
 		display: block;
+		a{
+			color: $color-english-violet;
+			&:hover{
+				opacity: .8;
+			}
+		}
 		.logotype-image{
 			img{
 				height: 3.5rem;
 				width: auto;
 				opacity: .7;
-				mix-blend-mode: multiply;
+				// mix-blend-mode: multiply;
+			}
+			span{
+				color: $color-english-violet;
 			}
 		}
 	}

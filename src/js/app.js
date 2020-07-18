@@ -31,7 +31,7 @@ $(document).ready(function(){
 	});
 
 	function addGoogleMap(){
-		$('#map').append('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.5621962415025!2d12.610263315924165!3d55.696598980538376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253cad6180be7%3A0x7cd81fdc8ae765ef!2sNature%20Tales%20Vibroacoustic%20Studio!5e0!3m2!1ses-419!2scl!4v1593801632132!5m2!1ses-419!2scl" class="embed-responsive-item animated fadeIn"  frameborder="0" scrolling="no" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>');
+		$('#map').append('<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4497.124390244007!2d12.612452!3d55.696599!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7cd81fdc8ae765ef!2sNature%20Tales%20Vibroacoustic%20Studio!5e0!3m2!1sen!2scl!4v1595042078543!5m2!1sen!2scl" class="embed-responsive-item animated fadeIn"  frameborder="0" scrolling="no" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>');
 	}addGoogleMap();
 
 	var iframeVsm = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6Fpjqt-Nzm9ODr6o9gQc-Zh8hOivuqm5-02a_KqdVcAUPKA/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0" class="animate fadeIn 		embed-responsive-item"></iframe>'

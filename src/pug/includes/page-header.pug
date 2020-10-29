@@ -1,0 +1,12 @@
+header#header.sticky
+	.container.animated.fadeIn
+		.row.d-flex.justify-content-between
+			.col-6.d-flex.justify-content-start
+				.logotype
+					a(href='/')
+						h1.logotype-image.d-flex.justify-content-center.py-2
+							img.mb-0(height='62' src='./images/logotype-dark.svg' alt='logotype')
+							span.header-title.my-auto.color-primary #{pagetitle}
+			.col-6.d-flex.justify-content-end
+				nav.mt-auto.mb-auto
+					a.link(href='/') Home

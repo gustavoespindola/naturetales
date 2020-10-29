@@ -8,14 +8,12 @@ var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
-
 var browserSync = require('browser-sync').create();
-
 var webp = require("gulp-webp");
-
 var uglify = require('gulp-uglify');
 var pipeline = require('readable-stream').pipeline;
- 
+var plumber = require('gulp-plumber');
+var pug = require('gulp-pug');
 var htmlmin = require('gulp-htmlmin');
  
 
@@ -27,7 +25,7 @@ var paths = {
 		src: './scr/js/*.js',
 	},
 };
-
+ 
 
 // ========================================================
 
@@ -52,12 +50,12 @@ function minifyhtml(){
 		.pipe(gulp.dest('./'));
 }
 
-gulp.task('minifyhtml', function(){
-	return gulp.src('./src/html/*.html')
-		.pipe(browserSync.stream())
-		.pipe(htmlmin({ collapseWhitespace: true }))
-		.pipe(gulp.dest('./'));
-});
+// gulp.task('minifyhtml', function(){
+// 	return gulp.src('./src/html/*.html')
+// 		.pipe(browserSync.stream())
+// 		.pipe(htmlmin({ collapseWhitespace: true }))
+// 		.pipe(gulp.dest('./'));
+// });
 
 // ========================================================
 gulp.task("webp", function() {
@@ -107,6 +105,36 @@ function minifyCSS() {
 		.pipe(gulp.dest('css/'));
 }
 
+function template() {
+	return gulp
+		.src(['./src/pug/*.pug'], { base: './src/pug/' })
+		.pipe(plumber())
+		.pipe(pug({
+			doctype: 'html',
+			pretty: true
+		}))
+		.pipe(gulp.dest('./src/html'))
+		.pipe(browserSync.stream());
+}
+
+// gulp.task('pug', function buildHTML() {
+//   return gulp.src(['./src/pug/*.pug'], { base: './src/pug/' })
+//   .pipe(pug({
+//   	// doctype: 'html', 
+//   	pretty: true 
+//   }))
+//   .pipe(gulp.dest('./src/html'))
+//   .pipe(browserSync.stream());
+// });
+
+// gulp.task('template', function(){
+//   gulp.src('./src/pug/*.pug')
+//   .pipe(pug({
+//     pretty: true
+//   }))
+//   .pipe(gulp.dest('./'));
+// });
+
 // Optimizing Images
 function optimiseImages() {
 	return (
@@ -122,20 +150,19 @@ function optimiseImages() {
 	);
 }
 
-function watch() {
 
+function watch() {
 	browserSync.init({
 		server: {
 				baseDir: "./",
 				index: "index.html"
 		}
 	});
-
 	gulp.watch("./src/scss/**/*.scss", styles); //minifyCSS
 	gulp.watch("./src/html/*.html", minifyhtml);
 	gulp.watch("./src/js/*.js", js);
+	gulp.watch('./src/pug/*.pug', template);
 }
-
 
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`

@@ -96,9 +96,8 @@ include includes/head.pug
 									button.btn.btn-primary.mt-auto.btn-lg(type='button' data-toggle='modal' data-target='#modal-calendar-iframe') See our calendar
 						.row.pt-5.justify-content-center
 							.col-12
-								.card.border-radius-big
-									.embed-responsive.embed-responsive-16by9
-										iframe.w-100.embed-responsive-item(src="https://booking.sport-solution.com/weekCalendar?chainId=2900562&centerId=2900564")
+								.card.border-radius-big.p-4.iframecalendar.d-flex.align-items-center
+									iframe.iframecalendar(src="https://booking.sport-solution.com/weekCalendar?chainId=2900562&centerId=2900564")
 
 	include includes/map.pug
 	include includes/footer.pug
@@ -108,7 +107,7 @@ include includes/head.pug
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 			<div class="modal-header">
-			<h5 class="modal-title" id="close-modal-calendar">NT Login</h5>
+			<h5 class="modal-title" id="close-modal-calendar">Login</h5>
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			</button>

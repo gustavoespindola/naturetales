@@ -102,7 +102,8 @@ function minifyCSS() {
 				suffix: '.min',
 			}),
 		)
-		.pipe(gulp.dest('css/'));
+		.pipe(gulp.dest('css/'))
+		.pipe(browserSync.stream());
 }
 
 function template() {

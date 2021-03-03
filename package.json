@@ -40,7 +40,7 @@
     "pipeline-js": "^1.0.2",
     "prismic-dom": "^2.2.3",
     "prismic-javascript": "^3.0.0",
-    "pug": "^3.0.0",
+    "pug": "^3.0.1",
     "pump": "^3.0.0"
   }
 }
